@@ -1,15 +1,15 @@
 import { LastClient } from "@musicorum/lastfm";
 import { LASTFM_API_KEY, LASTFM_USERNAME } from "$env/static/private";
 import type MusicInformation from "$types/MusicInformation";
+import { Cached } from "../lib/cache";
 
 const client = new LastClient(LASTFM_API_KEY);
-
-let lastFetched = 0;
-let cached: MusicInformation | undefined;
+const cached = new Cached<MusicInformation>(60);
 
 export const load = async () => {
-	if (Date.now() - lastFetched < 60000 && cached) {
-		return { musicInformation: cached };
+	const value = cached.valueIfNotExpired();
+	if (value) {
+		return { musicInformation: value };
 	}
 
 	const recentTracks = await client.user.getRecentTracks(LASTFM_USERNAME);
@@ -25,8 +25,7 @@ export const load = async () => {
 		url: track.url,
 	};
 
-	lastFetched = Date.now();
-	cached = musicInformation;
+	cached.set(musicInformation);
 
 	return { musicInformation };
 };
