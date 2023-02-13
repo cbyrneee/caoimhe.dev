@@ -7,6 +7,13 @@ import { Cached } from "$lib/cache";
 const client = new LastClient(LASTFM_API_KEY);
 const cache = new Cached<MusicInformation | undefined>(60);
 
+export const config = {
+	isr: {
+		expiration: 60,
+		group: 1,
+	},
+};
+
 export const load = async () => {
 	if (!cache.expired()) {
 		return { musicInformation: cache.valueIfNotExpired() };
