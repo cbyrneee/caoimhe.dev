@@ -1,15 +1,13 @@
 <script>
 	import { onMount } from "svelte";
 	import { fade } from "svelte/transition";
+
 	import "../app.css";
+	import "@fontsource/inter";
 
 	$: ready = false;
 	onMount(() => (ready = true));
 </script>
-
-<svelte:head>
-	<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-</svelte:head>
 
 <div class="min-w-screen flex min-h-screen">
 	<div class="mx-auto w-full p-6 xl:mx-0 xl:px-64">
