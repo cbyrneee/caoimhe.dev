@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	.text-title {
+		@apply cursor-default text-xl font-semibold text-neutral-800 xl:text-2xl;
+	}
+
+	.text-subtitle {
+		@apply cursor-default text-lg font-medium text-neutral-600 xl:text-xl;
+	}
+}

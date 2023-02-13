@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { Link } from "$lib/components/control";
-	import { Card } from "$lib/components/layout";
-	import { Text } from "$lib/components/text";
+	import { Link, Card } from "$components/base";
 
 	let title = "Boxcutter";
 	let artist = "Gatherers";
@@ -16,13 +14,14 @@
 				alt="Album art"
 			/>
 
-			<Text style="title">Spotify</Text>
+			<h1 class="text-title">Spotify</h1>
 		</div>
-		<Text style="subtitle">
+
+		<h2 class="text-subtitle">
 			I am currently listening to
 			<span class="text-neutral-900 font-semibold">{title}</span> by
 			<span class="text-neutral-900 font-semibold">{artist}</span>.
-		</Text>
+		</h2>
 	</div>
 
 	<div class="flex">
