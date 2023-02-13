@@ -1,8 +1,9 @@
 import { LastClient } from "@musicorum/lastfm";
 import { LASTFM_API_KEY, LASTFM_USERNAME } from "$env/static/private";
-import type MusicInformation from "$types/MusicInformation";
 import { Cached } from "$lib/cache";
 import { getCurrentTrack } from "$lib/lastfm";
+
+import type MusicInformation from "$types/MusicInformation";
 
 const client = new LastClient(LASTFM_API_KEY);
 const cached = new Cached<MusicInformation>(60);
