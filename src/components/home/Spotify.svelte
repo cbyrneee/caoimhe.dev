@@ -1,30 +1,47 @@
 <script lang="ts">
 	import { Link, Card } from "$components/base";
+	import { PUBLIC_SPOTIFY_PROFILE } from "$env/static/public";
+	import type MusicInformation from "$types/MusicInformation";
 
-	let title = "Boxcutter";
-	let artist = "Gatherers";
+	export let data: MusicInformation | undefined;
 </script>
 
 <Card class="border border-neutral-100 bg-neutral-50">
 	<div class="flex flex-col gap-2">
-		<div class="flex flex-row gap-2 items-center">
-			<img
-				class="rounded-full w-8 aspect-square transition-all hover:scale-105"
-				src="https://i.scdn.co/image/ab67616d0000b2736ee397740a778e1a3dc51dac"
-				alt="Album art"
-			/>
+		<div class="flex flex-row items-center gap-2">
+			{#if data}
+				<img
+					class="aspect-square w-8 rounded-full transition-all hover:scale-105"
+					src={data.albumArt}
+					alt="Album art"
+				/>
+			{/if}
 
 			<h1 class="text-title">Spotify</h1>
 		</div>
 
-		<h2 class="text-subtitle">
-			I am currently listening to
-			<span class="text-neutral-900 font-semibold">{title}</span> by
-			<span class="text-neutral-900 font-semibold">{artist}</span>.
-		</h2>
+		{#if data}
+			<h2 class="text-subtitle">
+				I am currently listening to
+				<span class="font-semibold text-neutral-900">{data.title}</span> by
+				<span class="font-semibold text-neutral-900">{data.artist}</span>.
+			</h2>
+		{:else}
+			<h2 class="text-subtitle">
+				I'm not listening to anything! You should check back agan later.
+			</h2>
+		{/if}
 	</div>
 
-	<div class="flex">
-		<Link destination="" class="bg-green-500 text-black">Play on Spotify</Link>
-	</div>
+	{#if data}
+		<div class="flex">
+			<Link destination={data.url} class="bg-green-500 text-black">See more info</Link>
+		</div>
+	{:else}
+		<div class="flex">
+			<Link destination={PUBLIC_SPOTIFY_PROFILE} class="bg-green-500 text-black"
+				>My Spotify Profile</Link
+			>
+		</div>
+	{/if}
 </Card>

@@ -2,11 +2,14 @@
 	import { Link } from "$components/base";
 	import { Card } from "$components/base";
 	import { Spotify } from "$components/home";
+
+	import type { PageData } from "./$types";
+	export let data: PageData;
 </script>
 
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
 	<Card
-		class="bg-gradient-to-br from-indigo-200/50 via-red-200/50 to-yellow-100/50 justify-between lg:col-span-2"
+		class="justify-between bg-gradient-to-br from-indigo-200/50 via-red-200/50 to-yellow-100/50 lg:col-span-2"
 	>
 		<div class="flex flex-col gap-2">
 			<h1 class="text-title">Hi, I'm Caoimhe</h1>
@@ -21,5 +24,5 @@
 		</div>
 	</Card>
 
-	<Spotify />
+	<Spotify data={data.musicInformation} />
 </div>

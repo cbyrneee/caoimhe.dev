@@ -4,7 +4,9 @@
 	"singleQuote": false,
 	"trailingComma": "all",
 	"printWidth": 100,
-	"svelteStrictMode": true,
+	"svelteStrictMode": false,
+	"svelteAllowShorthand": true,
+	"svelteBracketNewLine": true,
 	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
 	"pluginSearchDirs": ["."],
 	"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
