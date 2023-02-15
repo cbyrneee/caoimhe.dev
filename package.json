@@ -33,7 +33,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/inter": "^4.5.15",
 		"@musicorum/lastfm": "^0.1.3"
 	}
 }

@@ -3,7 +3,6 @@
 	import { Navigation } from "$components/root";
 
 	import "../app.css";
-	import "@fontsource/inter";
 
 	import type { PageData } from "./$types";
 	export let data: PageData;
