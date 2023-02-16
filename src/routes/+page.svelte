@@ -36,7 +36,7 @@
 	</h2>
 </div>
 
-<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 2xl:grid-cols-3">
 	{#each data.pages as project}
 		<Project
 			title={project.properties.title.text}
