@@ -5,6 +5,8 @@
 
 	import type { PageData } from "./$types";
 	export let data: PageData;
+
+	console.log(data);
 </script>
 
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
@@ -35,18 +37,13 @@
 </div>
 
 <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-	<Project
-		title="Compact Chat"
-		description="A mod for Minecraft which compacts messages which have been sent more than once."
-		image="/images/compact-chat.png"
-		link="https://modrinth.com/mod/compact-chat"
-	/>
-
-	<Project
-		title="Scroll Director"
-		description="An application for macOS which toggles the 'Natural Scrolling' setting whenever an external mouse is connected/disconnected."
-		image="/images/scroll-director.png"
-		link="https://github.com/cbyrneee/scroll-director"
-		imageClass="xl:w-2/3"
-	/>
+	{#each data.pages as project}
+		<Project
+			title={project.properties.title.text}
+			description={project.properties.description.text}
+			image={project.properties.image.files[0]}
+			link={project.properties.link.url}
+			imageClass={project.properties.imageclass.text}
+		/>
+	{/each}
 </div>
