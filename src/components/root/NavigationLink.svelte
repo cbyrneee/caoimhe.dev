@@ -3,10 +3,10 @@
 
 	export let destination: string;
 
-	$: isActive = $page.url.pathname === destination;
+	$: isActive = $page.url?.pathname === destination;
 </script>
 
-<a href={destination} class={!isActive ? "hover:opacity-75 transition-all" : ""}>
+<a href={destination} class={!isActive ? "transition-all hover:opacity-75" : ""}>
 	<h3 class={isActive && "font-semibold"}>
 		<slot />
 	</h3>

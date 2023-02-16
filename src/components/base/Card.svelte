@@ -3,6 +3,6 @@
 	export { className as class };
 </script>
 
-<div class="flex flex-col gap-4 rounded-xl p-6 {className}">
+<div class="flex flex-col gap-4 overflow-clip rounded-xl p-6 {className}">
 	<slot />
 </div>

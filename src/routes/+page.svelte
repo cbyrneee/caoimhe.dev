@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { Link } from "$components/base";
-	import { Card } from "$components/base";
-	import { Spotify } from "$components/home";
+	import { Link, Card, GradientBackground, PerspectiveImage } from "$components/base";
+	import { Spotify, Project } from "$components/home";
+	import { Open } from "$components/icon";
 
 	import type { PageData } from "./$types";
 	export let data: PageData;
 </script>
 
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-	<Card
-		class="justify-between bg-gradient-to-br from-indigo-200/50 via-red-200/50 to-yellow-100/50 lg:col-span-2"
-	>
+	<Card class="relative justify-between lg:col-span-2">
+		<GradientBackground class="h-full w-full opacity-20" />
+
 		<div class="flex flex-col gap-2">
 			<h1 class="text-title">Hi, I'm Caoimhe</h1>
 			<h2 class="text-subtitle">
@@ -25,4 +25,20 @@
 	</Card>
 
 	<Spotify data={data.musicInformation} />
+</div>
+
+<div class="flex flex-col gap-2 pt-12 pb-6">
+	<h1 class="text-title">Personal Projects</h1>
+	<h2 class="text-subtitle">
+		Check out some of my personal projects that I work on in my spare time.
+	</h2>
+</div>
+
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+	<Project
+		title="Scroll Director"
+		description="An application for macOS which toggles the 'Natural Scrolling' setting whenever an external mouse is connected/disconnected."
+		image="/images/scroll-director.png"
+		link="https://github.com/cbyrneee/scroll-director"
+	/>
 </div>

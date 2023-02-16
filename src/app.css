@@ -18,4 +18,8 @@
 	.text-subtitle {
 		@apply cursor-default text-lg font-medium text-neutral-600 xl:text-xl;
 	}
+
+	.text-body {
+		@apply cursor-default text-neutral-700 xl:text-lg;
+	}
 }
