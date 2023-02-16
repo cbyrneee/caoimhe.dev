@@ -1,10 +1,26 @@
 <script lang="ts">
 	import { onMount } from "svelte";
+	import NProgress from "nprogress";
+
 	import { fade } from "svelte/transition";
 	import { Navigation } from "$components/root";
 
+	import { navigating } from "$app/stores";
 	import type { PageData } from "./$types";
+
+	import "nprogress/nprogress.css";
 	import "../app.css";
+
+	NProgress.configure({ showSpinner: false });
+
+	$: {
+		if ($navigating) {
+			NProgress.start();
+		}
+		if (!$navigating) {
+			NProgress.done();
+		}
+	}
 
 	// Used for loading on page refresh
 	let ready = false;

@@ -23,3 +23,13 @@
 		@apply cursor-default text-neutral-700 xl:text-lg;
 	}
 }
+
+/** Change NProgress color **/
+#nprogress .bar {
+	background: theme("colors.indigo.500") !important;
+	height: 3.5px !important;
+}
+
+#nprogress .peg {
+	box-shadow: 0 0 10px theme("colors.indigo.200"), 0 0 5px theme("colors.indigo.200");
+}
