@@ -6,7 +6,7 @@
 	export let data: MusicInformation | undefined;
 </script>
 
-<Card class="border border-neutral-100 bg-neutral-50">
+<Card class="flex justify-between border border-neutral-100 bg-neutral-50">
 	<div class="flex flex-col gap-2">
 		<div class="flex flex-row items-center gap-2">
 			{#if data}

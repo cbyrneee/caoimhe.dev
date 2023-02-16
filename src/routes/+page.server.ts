@@ -5,7 +5,7 @@ import { getCurrentTrack } from "$lib/lastfm";
 const client = new LastClient(LASTFM_API_KEY);
 
 export const load = async () => {
-	// const track = await getCurrentTrack(client, LASTFM_USERNAME);
-	// return { musicInformation: track };
-	return { musicInformation: null };
+	const track = await getCurrentTrack(client, LASTFM_USERNAME);
+	return { musicInformation: track };
+	// return { musicInformation: null };
 };

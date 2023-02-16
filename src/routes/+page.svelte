@@ -34,11 +34,19 @@
 	</h2>
 </div>
 
-<div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+	<Project
+		title="Compact Chat"
+		description="A mod for Minecraft which compacts messages which have been sent more than once."
+		image="/images/compact-chat.png"
+		link="https://modrinth.com/mod/compact-chat"
+	/>
+
 	<Project
 		title="Scroll Director"
 		description="An application for macOS which toggles the 'Natural Scrolling' setting whenever an external mouse is connected/disconnected."
 		image="/images/scroll-director.png"
 		link="https://github.com/cbyrneee/scroll-director"
+		imageClass="xl:w-2/3"
 	/>
 </div>
