@@ -8,7 +8,7 @@
 </script>
 
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-	<Card class="relative justify-between lg:col-span-2">
+	<Card class="relative justify-between lg:col-span-2 border border-neutral-200">
 		<GradientBackground class="h-full w-full opacity-20" />
 
 		<div class="flex flex-col gap-2">
@@ -27,7 +27,7 @@
 	<Spotify data={data.musicInformation} />
 </div>
 
-<div class="flex flex-col gap-2 pt-12 pb-6">
+<div class="flex flex-col gap-2 py-6">
 	<h1 class="text-title">Personal Projects</h1>
 	<h2 class="text-subtitle">
 		Check out some of my personal projects that I work on in my spare time.
