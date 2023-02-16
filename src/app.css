@@ -12,15 +12,19 @@
 
 @layer utilities {
 	.text-title {
-		@apply cursor-default text-xl font-semibold text-neutral-800 xl:text-2xl;
+		@apply cursor-default text-xl font-semibold text-neutral-800 dark:text-neutral-100 xl:text-2xl;
 	}
 
 	.text-subtitle {
-		@apply cursor-default text-lg font-medium text-neutral-600 xl:text-xl;
+		@apply cursor-default text-lg font-medium text-neutral-600 dark:text-neutral-300 xl:text-xl;
 	}
 
 	.text-body {
-		@apply cursor-default text-neutral-700 xl:text-lg;
+		@apply cursor-default text-neutral-700 dark:text-neutral-200 xl:text-lg;
+	}
+
+	.border-default {
+		@apply border border-neutral-100 dark:border-neutral-700;
 	}
 }
 

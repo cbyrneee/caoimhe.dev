@@ -7,7 +7,7 @@
 </script>
 
 <a href={destination} class={!isActive ? "transition-all hover:opacity-75" : ""}>
-	<h3 class={isActive && "font-semibold"}>
+	<h3 class="dark:text-white {isActive && 'font-semibold'}">
 		<slot />
 	</h3>
 </a>

@@ -6,7 +6,7 @@
 	export let data: MusicInformation | undefined;
 </script>
 
-<Card class="flex justify-between border border-neutral-100 bg-neutral-50">
+<Card class="flex justify-between border-default bg-neutral-50 dark:bg-neutral-800">
 	<div class="flex flex-col gap-2">
 		<div class="flex flex-row items-center gap-2">
 			{#if data}
@@ -23,8 +23,10 @@
 		{#if data}
 			<h2 class="text-subtitle">
 				I am currently listening to
-				<span class="font-semibold text-neutral-900">{data.title}</span> by
-				<span class="font-semibold text-neutral-900">{data.artist}</span>.
+				<span class="font-semibold text-neural-900 dark:text-green-500">{data.title}</span>
+				by
+				<span class="font-semibold text-neural-900 dark:text-green-500">{data.artist}</span
+				>.
 			</h2>
 		{:else}
 			<h2 class="text-subtitle">

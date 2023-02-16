@@ -8,8 +8,8 @@
 </script>
 
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-	<Card class="relative justify-between lg:col-span-2 border border-neutral-200">
-		<GradientBackground class="h-full w-full opacity-20" />
+	<Card class="relative justify-between lg:col-span-2">
+		<GradientBackground class="h-full w-full opacity-20 dark:opacity-40" />
 
 		<div class="flex flex-col gap-2">
 			<h1 class="text-title">Hi, I'm Caoimhe</h1>

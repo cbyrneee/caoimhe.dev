@@ -33,7 +33,7 @@
 </script>
 
 <div class="min-w-screen flex min-h-screen">
-	<div class="flex flex-col mx-auto w-full gap-6 p-6 xl:mx-0 xl:px-64">
+	<div class="mx-auto flex w-full flex-col gap-6 p-6 xl:mx-0 xl:px-64">
 		<Navigation />
 
 		{#if ready}

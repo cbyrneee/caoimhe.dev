@@ -11,7 +11,7 @@
 	export let imageClass: string | undefined;
 </script>
 
-<Card class="border border-neutral-100 bg-neutral-50">
+<Card class="border-default bg-neutral-50 dark:bg-neutral-800">
 	<div class="flex flex-row items-center justify-between">
 		<div class="flex flex-col gap-2">
 			<h1 class="text-title">{title}</h1>
@@ -22,7 +22,7 @@
 				<div
 					class="rounded-full bg-black p-1.5 transition-all hover:scale-105 hover:opacity-75 active:scale-105 active:opacity-75"
 				>
-					<Open class="h-3 xl:h-4 text-white" />
+					<Open class="h-3 text-white xl:h-4" />
 				</div>
 			</a>
 		{/if}
@@ -30,7 +30,7 @@
 
 	<h2 class="text-body -mt-2">{description}</h2>
 
-	<div class="flex flex-col self-center items-center justify-center h-full">
+	<div class="flex h-full flex-col items-center justify-center self-center">
 		{#if image}
 			<PerspectiveImage class="self-center {imageClass}">
 				<img class="rounded-lg" src={image} alt={title} />
