@@ -18,7 +18,7 @@
 			Math.floor(200 + 64 * Math.cos((x * x - y * y) / 300 + t));
 
 		const calcG = (x: number, y: number, t: number) =>
-			Math.floor(100 + (64 * (x * x * Math.cos(t / 4) + y * y * Math.sin(t / 3))) / 300);
+			Math.floor(50 + (64 * (x * x * Math.cos(t / 4) + y * y * Math.sin(t / 3))) / 300);
 
 		const calcB = (x: number, y: number, t: number) =>
 			Math.floor(
@@ -41,7 +41,7 @@
 				}
 			}
 
-			t += 0.03;
+			t += 0.02;
 			window.requestAnimationFrame(draw);
 		};
 
