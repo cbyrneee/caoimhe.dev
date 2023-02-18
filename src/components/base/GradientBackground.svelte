@@ -58,6 +58,6 @@
 		bind:this={canvas}
 		width="32"
 		height="32"
-		class="h-full w-full opacity-0 transition-all duration-200"
+		class="h-full w-full opacity-0 transition-all duration-100"
 	/>
 </div>

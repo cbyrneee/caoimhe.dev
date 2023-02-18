@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { Link, Card } from "$components/base";
 	import { PUBLIC_SPOTIFY_PROFILE } from "$env/static/public";
-	import type MusicInformation from "$types/MusicInformation";
+	import type MusicInformation from "$lib/types/TrackInformation";
 
-	export let data: MusicInformation | undefined;
+	export let data: TrackInformation | undefined = undefined;
 </script>
 
 <Card class="flex justify-between border-default bg-neutral-50 dark:bg-neutral-800">

@@ -12,8 +12,6 @@
 		"paths": {
 			"$components": ["./src/components"],
 			"$components/*": ["./src/components/*"],
-			"$types": ["./src/types"],
-			"$types/*": ["./src/types/*"],
 			"$lib": ["./src/lib"],
 			"$lib/*": ["./src/lib/*"]
 		}

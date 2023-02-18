@@ -2,10 +2,22 @@
 	import { Link, Card, GradientBackground, PerspectiveImage } from "$components/base";
 	import { Spotify, Project } from "$components/home";
 	import { Open } from "$components/icon";
+
 	import projects from "$lib/projects";
+	import type TrackInformation from "$lib/types/TrackInformation";
 
 	import type { PageData } from "./$types";
 	export let data: PageData;
+
+	async function fetchTrackInformation(): TrackInformation | undefined {
+		const res = await fetch(`/api/music`);
+
+		if (res.status == 200) {
+			return await res.json();
+		} else {
+			return undefined;
+		}
+	}
 </script>
 
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
@@ -25,7 +37,11 @@
 		</div>
 	</Card>
 
-	<Spotify data={data.musicInformation} />
+	{#await fetchTrackInformation()}
+		<Spotify />
+	{:then res}
+		<Spotify data={res} />
+	{/await}
 </div>
 
 <div class="flex flex-col gap-2 py-6">

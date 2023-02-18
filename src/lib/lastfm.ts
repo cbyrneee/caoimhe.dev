@@ -1,10 +1,10 @@
-import type MusicInformation from "$types/MusicInformation";
+import type TrackInformation from "$lib/types/TrackInformation";
 import type { LastClient } from "@musicorum/lastfm";
 
 export async function getCurrentTrack(
 	client: LastClient,
 	username: string,
-): Promise<MusicInformation | undefined> {
+): Promise<TrackInformation | undefined> {
 	const recentTracks = await client.user.getRecentTracks(username);
 	const track = recentTracks.tracks.at(0);
 
