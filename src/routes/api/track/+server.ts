@@ -1,5 +1,5 @@
 import { LastClient } from "@musicorum/lastfm";
-import { error, json } from "@sveltejs/kit";
+import { error, text } from "@sveltejs/kit";
 
 import { LASTFM_API_KEY, LASTFM_USERNAME } from "$env/static/private";
 import { getCurrentTrack } from "$lib/lastfm";
@@ -14,5 +14,5 @@ export const GET = (async () => {
 		throw error(404, "No track is currently playing");
 	}
 
-	return json(currentTrack);
+	return text(JSON.stringify(currentTrack, undefined, 2));
 }) satisfies RequestHandler;
