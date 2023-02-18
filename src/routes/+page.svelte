@@ -1,23 +1,19 @@
 <script lang="ts">
+	import { onMount } from "svelte";
+
 	import { Link, Card, GradientBackground, PerspectiveImage } from "$components/base";
 	import { Spotify, Project } from "$components/home";
 	import { Open } from "$components/icon";
 
 	import projects from "$lib/projects";
-	import type TrackInformation from "$lib/types/TrackInformation";
+	import { trackStore, trackState } from "$lib/stores";
 
-	import type { PageData } from "./$types";
-	export let data: PageData;
-
-	async function fetchTrackInformation(): TrackInformation | undefined {
-		const res = await fetch(`/api/music`);
-
-		if (res.status == 200) {
-			return await res.json();
-		} else {
-			return undefined;
+	// This reloads the track data when the page is navigated to after being loaded before.
+	onMount(() => {
+		if ($trackState?.isLoaded) {
+			trackStore.reload();
 		}
-	}
+	});
 </script>
 
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
@@ -37,11 +33,11 @@
 		</div>
 	</Card>
 
-	{#await fetchTrackInformation()}
+	{#if $trackState?.isLoading}
 		<Spotify />
-	{:then res}
-		<Spotify data={res} />
-	{/await}
+	{:else}
+		<Spotify data={$trackStore} />
+	{/if}
 </div>
 
 <div class="flex flex-col gap-2 py-6">
