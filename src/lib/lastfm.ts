@@ -15,7 +15,7 @@ export async function getCurrentTrack(
 	return {
 		title: track.name,
 		artist: track.artist.name,
-		albumArt: track.images[0].url,
+		albumArt: track.images[1].url,
 		url: track.url,
 	};
 }
