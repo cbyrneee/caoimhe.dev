@@ -26,6 +26,10 @@
 	.border-default {
 		@apply border border-neutral-100 dark:border-neutral-700;
 	}
+
+	.code-block {
+		@apply rounded-md bg-neutral-900 p-1;
+	}
 }
 
 /** Change NProgress color **/

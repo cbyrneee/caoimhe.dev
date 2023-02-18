@@ -2,6 +2,7 @@
 	import { Link, Card, GradientBackground, PerspectiveImage } from "$components/base";
 	import { Spotify, Project } from "$components/home";
 	import { Open } from "$components/icon";
+	import projects from "$lib/projects";
 
 	import type { PageData } from "./$types";
 	export let data: PageData;
@@ -35,13 +36,12 @@
 </div>
 
 <div class="grid grid-cols-1 gap-4 md:grid-cols-2 2xl:grid-cols-3">
-	{#each data.pages as project}
+	{#each projects as project}
 		<Project
-			title={project.properties.title.text}
-			description={project.properties.description.text}
-			image={project.properties.image.files[0]}
-			link={project.properties.link.url}
-			imageClass={project.properties.imageclass.text}
+			title={project.title}
+			description={project.description}
+			image={project.image}
+			link={project.link}
 		/>
 	{/each}
 </div>

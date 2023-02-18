@@ -7,8 +7,6 @@
 
 	export let image: string | undefined;
 	export let link: string | undefined;
-
-	export let imageClass: string | undefined;
 </script>
 
 <Card class="border-default bg-neutral-50 dark:bg-neutral-800">
@@ -28,11 +26,11 @@
 		{/if}
 	</div>
 
-	<h2 class="text-body -mt-2">{description}</h2>
+	<h2 class="text-body -mt-2">{@html description}</h2>
 
 	<div class="flex h-full flex-col items-center justify-center self-center">
 		{#if image}
-			<PerspectiveImage class="self-center {imageClass}">
+			<PerspectiveImage class="self-center">
 				<img class="rounded-lg" src={image} alt={title} />
 			</PerspectiveImage>
 		{/if}
