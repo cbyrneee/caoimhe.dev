@@ -29,7 +29,9 @@
 		</div>
 
 		<div class="flex">
-			<Link destination="" class="bg-black text-neutral-50">Contact Me</Link>
+			<Link destination="/contact" class="bg-black text-neutral-50" newTab={false}
+				>Contact Me</Link
+			>
 		</div>
 	</Card>
 
