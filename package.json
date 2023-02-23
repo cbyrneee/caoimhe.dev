@@ -34,7 +34,6 @@
 	"type": "module",
 	"dependencies": {
 		"@musicorum/lastfm": "^0.1.4",
-		"@square/svelte-store": "^1.0.14",
 		"nprogress": "^0.2.0"
 	}
 }

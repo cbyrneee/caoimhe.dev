@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   '@musicorum/lastfm': ^0.1.4
-  '@square/svelte-store': ^1.0.14
   '@sveltejs/adapter-vercel': ^2.1.0
   '@sveltejs/kit': ^1.8.3
   '@typescript-eslint/eslint-plugin': ^5.53.0
@@ -25,7 +24,6 @@ specifiers:
 
 dependencies:
   '@musicorum/lastfm': 0.1.4
-  '@square/svelte-store': 1.0.14
   nprogress: 0.2.0
 
 devDependencies:
@@ -356,13 +354,6 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: true
-
-  /@square/svelte-store/1.0.14:
-    resolution: {integrity: sha512-kNaSpEec2JevfOB9XaWkq00oAOvm2fq8/0yotg++UVEHuHXQqM6pW602ByjBwFHn1gTRSdb568BAtkEDBt5uKQ==}
-    dependencies:
-      cookie-storage: 6.1.0
-      svelte: 3.55.1
-    dev: false
 
   /@sveltejs/adapter-vercel/2.1.0_@sveltejs+kit@1.8.3:
     resolution: {integrity: sha512-cK0R40ALUNDQG9OhaDBYtU55eob6CD1BXCcVSoC1N+GOq/N6FQaMkWXFVGLl98Ja0EZwoZeFAwf2m0Pnc3uq2Q==}
@@ -837,10 +828,6 @@ packages:
   /console-control-strings/1.1.0:
     resolution: {integrity: sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==}
     dev: true
-
-  /cookie-storage/6.1.0:
-    resolution: {integrity: sha512-HeVqbVy8BjXhAAuFtL6MTG+witHoLbxfky2jgVh9FmxmyL6IKa9gSSyPNjevXCCCxPu6Tzd9J8+eXTRQzYU/cg==}
-    dev: false
 
   /cookie/0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
@@ -2181,6 +2168,7 @@ packages:
   /svelte/3.55.1:
     resolution: {integrity: sha512-S+87/P0Ve67HxKkEV23iCdAh/SX1xiSfjF1HOglno/YTbSTW7RniICMCofWGdJJbdjw3S+0PfFb1JtGfTXE0oQ==}
     engines: {node: '>= 8'}
+    dev: true
 
   /tailwindcss/3.2.7_postcss@8.4.21:
     resolution: {integrity: sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==}
