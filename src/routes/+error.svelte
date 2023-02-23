@@ -6,7 +6,7 @@
 </script>
 
 {#if $page.error}
-	<Card class="border-default bg-neutral-50 dark:bg-neutral-800">
+	<Card class="border-default bg-neutral-100 dark:bg-neutral-800">
 		<div class="flex flex-col gap-2">
 			<h1 class="text-title">{$page.error.message ?? "Uh oh! An error occurred."}</h1>
 		</div>

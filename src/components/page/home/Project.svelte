@@ -10,7 +10,7 @@
 	export let link: string | undefined;
 </script>
 
-<Card class="border-default bg-neutral-50 dark:bg-neutral-800">
+<Card class="border-default bg-neutral-100 dark:bg-neutral-800">
 	<div class="flex flex-row items-center justify-between">
 		<div class="flex flex-col gap-2">
 			<h1 class="text-title">{title}</h1>

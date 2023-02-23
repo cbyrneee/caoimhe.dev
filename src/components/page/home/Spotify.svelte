@@ -6,7 +6,7 @@
 	export let data: TrackInformation | undefined = undefined;
 </script>
 
-<Card class="border-default flex justify-between bg-neutral-50 dark:bg-neutral-800">
+<Card class="border-default flex justify-between bg-neutral-100 dark:bg-neutral-800">
 	<div class="flex flex-col gap-2">
 		<div class="flex flex-row items-center gap-2">
 			{#if data}
