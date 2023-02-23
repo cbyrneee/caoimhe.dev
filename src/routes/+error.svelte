@@ -12,7 +12,7 @@
 		</div>
 
 		<div class="flex">
-			<Link newTab={false} destination="/" class="bg-black text-neutral-50">Go back</Link>
+			<Link newTab={false} destination="/" class="bg-black text-neutral-50">Go home</Link>
 		</div>
 	</Card>
 {/if}
