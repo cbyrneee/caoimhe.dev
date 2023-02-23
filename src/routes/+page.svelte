@@ -6,14 +6,10 @@
 	import { Open } from "$components/icon";
 
 	import projects from "$lib/projects";
-	import { trackStore, trackState } from "$lib/stores";
+	import type { PageData } from "./$types";
 
-	// This reloads the track data when the page is navigated to after being loaded before.
-	onMount(() => {
-		if ($trackState?.isLoaded) {
-			trackStore.reload();
-		}
-	});
+	export let data: PageData;
+	const { currentTrack } = data;
 </script>
 
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
@@ -35,11 +31,7 @@
 		</div>
 	</Card>
 
-	{#if $trackState?.isLoading}
-		<Spotify />
-	{:else}
-		<Spotify data={$trackStore} />
-	{/if}
+	<Spotify data={currentTrack} />
 </div>
 
 <div class="flex flex-col gap-2 py-6">
