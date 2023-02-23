@@ -12,6 +12,12 @@
 	const { currentTrack } = data;
 </script>
 
+<svelte:head>
+	<title>Caoimhe's Portfolio</title>
+	<meta property="og:title" content="Caoimhe's Portfolio" />
+	<meta name="twitter:card" content="summary_large_image" />
+</svelte:head>
+
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
 	<Card class="relative justify-between lg:col-span-2">
 		<GradientBackground class="h-full w-full opacity-20 dark:opacity-40" />
