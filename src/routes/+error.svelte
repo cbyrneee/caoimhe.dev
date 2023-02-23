@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Card, Link } from "$components/base";
-	import { GradientBackground } from "$components/base";
+	import { GradientBackground } from "$components/decoration";
 
 	import { page } from "$app/stores";
 </script>

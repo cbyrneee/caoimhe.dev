@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { Link, Card } from "$components/base";
 	import { PUBLIC_SPOTIFY_PROFILE } from "$env/static/public";
-	import type MusicInformation from "$lib/types/TrackInformation";
+	import type MusicInformation from "$lib/types/track.types";
 
 	export let data: TrackInformation | undefined = undefined;
 </script>
 
-<Card class="flex justify-between border-default bg-neutral-50 dark:bg-neutral-800">
+<Card class="border-default flex justify-between bg-neutral-50 dark:bg-neutral-800">
 	<div class="flex flex-col gap-2">
 		<div class="flex flex-row items-center gap-2">
 			{#if data}
@@ -23,9 +23,9 @@
 		{#if data}
 			<h2 class="text-subtitle">
 				I am currently listening to
-				<span class="font-semibold text-neural-900 dark:text-green-500">{data.title}</span>
+				<span class="text-neural-900 font-semibold dark:text-green-500">{data.title}</span>
 				by
-				<span class="font-semibold text-neural-900 dark:text-green-500">{data.artist}</span
+				<span class="text-neural-900 font-semibold dark:text-green-500">{data.artist}</span
 				>.
 			</h2>
 		{:else}

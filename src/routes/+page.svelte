@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 
-	import { Link, Card, GradientBackground, PerspectiveImage } from "$components/base";
-	import { Spotify, Project } from "$components/home";
+	import { Link, Card } from "$components/base";
+	import { GradientBackground, PerspectiveImage } from "$components/decoration";
+	import { Spotify, Project } from "$components/page/home";
 	import { Open } from "$components/icon";
 
 	import projects from "$lib/projects";
@@ -31,9 +32,9 @@
 		</div>
 
 		<div class="flex">
-			<Link destination="/contact" class="bg-black text-neutral-50" newTab={false}
-				>Contact Me</Link
-			>
+			<Link destination="/contact" class="bg-black text-neutral-50" newTab={false}>
+				Contact Me
+			</Link>
 		</div>
 	</Card>
 

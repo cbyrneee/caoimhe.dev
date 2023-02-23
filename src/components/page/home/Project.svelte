@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Card, PerspectiveImage } from "$components/base";
+	import { Card } from "$components/base";
+	import { PerspectiveImage } from "$components/decoration";
 	import { Open } from "$components/icon";
 
 	export let title: string;

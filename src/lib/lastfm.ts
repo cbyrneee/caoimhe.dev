@@ -1,4 +1,4 @@
-import type TrackInformation from "$lib/types/TrackInformation";
+import type TrackInformation from "$lib/types/track.types";
 import type { LastClient } from "@musicorum/lastfm";
 
 export async function getCurrentTrack(

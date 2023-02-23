@@ -3,7 +3,7 @@
 	import NProgress from "nprogress";
 
 	import { fade } from "svelte/transition";
-	import { Navigation } from "$components/root";
+	import { Navigation } from "$components/page/root";
 
 	import { navigating } from "$app/stores";
 	import type { PageData } from "./$types";
